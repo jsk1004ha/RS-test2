@@ -1,0 +1,17 @@
+{
+  "name": "rs-test2-postgres-write",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A real PostgreSQL write/read deployment test for RaibitServer",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "pg": "^8.23.0"
+  }
+}

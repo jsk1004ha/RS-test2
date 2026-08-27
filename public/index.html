@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RS-test2 · PostgreSQL 쓰기 검증</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <span class="eyebrow">RAIBITSERVER DATABASE PROBE</span>
+        <h1>PostgreSQL 쓰기 검증</h1>
+        <p>공개 앱에서 저장한 문장이 관리형 PostgreSQL에 실제로 남는지 확인합니다.</p>
+        <div id="status" class="status">확인 중</div>
+      </header>
+
+      <section aria-labelledby="write-title">
+        <h2 id="write-title">새 기록</h2>
+        <form id="write-form">
+          <label for="message">메시지</label>
+          <div class="input-row">
+            <input id="message" name="message" maxlength="120" required placeholder="DB에 남길 문장" />
+            <button type="submit">DB에 쓰기</button>
+          </div>
+        </form>
+        <p id="result" role="status"></p>
+      </section>
+
+      <section aria-labelledby="history-title">
+        <div class="section-title">
+          <h2 id="history-title">저장된 기록</h2>
+          <button id="refresh" class="secondary" type="button" aria-label="기록 새로고침">↻</button>
+        </div>
+        <ol id="writes"><li class="empty">불러오는 중</li></ol>
+      </section>
+
+      <footer><span id="release">배포 정보 확인 중</span><span>© 2026 Raibit, ISHS.</span></footer>
+    </main>
+  </body>
+</html>

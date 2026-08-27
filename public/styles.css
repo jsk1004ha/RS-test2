@@ -1,0 +1,38 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, Pretendard, system-ui, sans-serif;
+  background: #080b0d;
+  color: #f4f7f5;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: radial-gradient(circle at 10% 0%, #153624 0, transparent 30%), #080b0d; }
+main { width: min(760px, calc(100% - 32px)); margin: 0 auto; padding: 72px 0 32px; }
+header { padding-bottom: 36px; border-bottom: 1px solid #293039; }
+.eyebrow { color: #62df8b; font: 700 12px/1.2 ui-monospace, monospace; letter-spacing: .14em; }
+h1 { margin: 14px 0 10px; font-size: clamp(36px, 7vw, 64px); line-height: 1; letter-spacing: -.05em; }
+h2 { margin: 0; font-size: 20px; }
+p { color: #9aa5a0; line-height: 1.7; }
+.status { display: inline-flex; margin-top: 12px; padding: 8px 12px; border: 1px solid #394149; border-radius: 999px; color: #b8c0bc; }
+.status.ok { border-color: #236e3d; background: #102a1b; color: #62df8b; }
+.status.error { border-color: #74333a; background: #2e1418; color: #ff8c97; }
+section { padding: 32px 0; border-bottom: 1px solid #293039; }
+label { display: block; margin: 20px 0 8px; color: #c9d0cc; font-size: 14px; }
+.input-row { display: grid; grid-template-columns: 1fr auto; gap: 10px; }
+input, button { min-height: 48px; border-radius: 9px; border: 1px solid #394149; font: inherit; }
+input { width: 100%; padding: 0 14px; background: #0e1215; color: #f4f7f5; outline: none; }
+input:focus { border-color: #68746e; }
+button { padding: 0 20px; border-color: #62df8b; background: #62df8b; color: #07110a; font-weight: 800; cursor: pointer; }
+button:disabled { cursor: wait; opacity: .6; }
+button.secondary { min-width: 48px; padding: 0; border-color: #394149; background: transparent; color: #f4f7f5; font-size: 22px; }
+.section-title { display: flex; align-items: center; justify-content: space-between; }
+ol { margin: 18px 0 0; padding: 0; list-style: none; }
+li { display: grid; gap: 6px; padding: 16px 0; border-top: 1px solid #20262b; }
+li small { color: #7f8a84; font: 12px/1.4 ui-monospace, monospace; }
+li.empty { color: #7f8a84; }
+footer { display: flex; justify-content: space-between; gap: 16px; padding-top: 24px; color: #6f7974; font-size: 12px; }
+@media (max-width: 560px) {
+  main { padding-top: 44px; }
+  .input-row { grid-template-columns: 1fr; }
+  footer { flex-direction: column; }
+}
